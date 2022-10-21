@@ -1,0 +1,40 @@
+nav {
+    background:#2fcdcd ;
+    height: -100px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+   
+}
+
+.enlace {
+    border-radius: 9px;
+    font-size: 40px;
+    font: italic;
+    height: 45px;
+    width: 60%;
+}
+.resultado{
+    font-size: 40px;
+    
+}
+   
+.tamaño{
+    text-size-adjust: 20px;
+}
+.button{
+    height: 45px;
+    width: 15%;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: beige;
+      
+}
+
+h1{
+    font-size: 70px;
+    font-style: italic;
+    text-align: left;
+}
