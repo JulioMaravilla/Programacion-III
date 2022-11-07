@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Conversor de Celcius a Fahrenheits</title>
+    <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+    <nav>
+    <h1>
+        Conversor de Celcius a Fahrenheits.
+    </h1>
+    </nav>
+<fieldset>
+    <div id="father" class="tamaño">
+        <center>
+        <form action="POST">
+            <input type="text" id="num" placeholder="Grados Celcius" class="enlace">
+            <input type="submit" id="btn" value="Convertir" class="button">
+        </form>
+
+        <span id="resultado" class="resultado"> </span>
+           </center>
+    </div>
+</fieldset>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(e => {
+            let num = $('#num')[0],
+                btn = $('#btn')[0];
+
+            btn.onclick = e => {
+                e.preventDefault();
+                console.log(num.value);
+                calc(num.value);
+            };
+            num.onsubmit = e => {
+                e.preventDefault();
+                console.log(num.value);
+                calc(num.value);
+            };
+            let calc = x => {
+                $.post("http://localhost:3001", x, response => {
+                    $(resultado).text('Grados Fahrenheits: ' + response);
+                });
+            }
+        })
+    </script>
+</body>
+</html>
